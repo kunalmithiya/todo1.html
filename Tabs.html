@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabs button </title>
+    <style>
+        * {box-sizing: border-box}
+        
+    
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: Arial;
+        }
+        
+        
+        .tablink 
+          {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 17px;
+          width: 25%;
+        }
+        
+        .tablink:hover {
+          background-color: #777;
+        }
+        
+    
+        .tabcontent  {
+          color: white ;
+          display: none;
+          padding: 100px 20px;
+          height: 100%;
+        }
+        
+        #Home {background-color: rgba(82, 63, 36, 0.877);}
+        #News {background-color: rgba(6, 12, 4, 0.836);}
+        #Contact {background-color: rgba(0, 3, 10, 0.822);}
+        #About {background-color: rgba(51, 35, 6, 0.932);}
+        </style>
+        </head>
+        <body>
+        
+        <button class="tablink" onclick="openPage('Home', this, 'black')">Home</button>
+        <button class="tablink" onclick="openPage('News', this, 'black')" id="defaultOpen">News</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'black')">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, 'black')">About</button>
+        
+        <div id="Home" class="tabcontent">
+          <h3>Home</h3>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        </div>
+        
+        <div id="News" class="tabcontent">
+          <h3>News</h3>
+          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.The property ofsystem in the function of js  </p> 
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p>
+        </div>
+        
+        <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>Who we are and what we do It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English My name is kunal mithiya i am from anupgarh then we the populae </p>
+        </div>
+        
+       
+          
+        <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        
+        document.getElementById("defaultOpen").click();
+        </script> 
+</body>
+</html>
